@@ -17,6 +17,6 @@ Primeramente, las partes involucradas en establecer una comunicación a través 
 9- Escribir la llave\
 10- Desencriptar el mensaje\
 11- Leer el mensaje\
-12- Borrar el mensaje.\
-###Para mayor información: [El Protocolo MTP](https://docs.google.com/document/d/e/2PACX-1vTf7jOA-6RzPAun4pg9cNOq2YFjnClUc6e2jnNv3lMlHcqKmA3GF4kXPWkOdwIq4VUjKvcAQMHFziKz/pub)
+12- Borrar el mensaje.
+### Para mayor información: [El Protocolo MTP](https://docs.google.com/document/d/e/2PACX-1vTf7jOA-6RzPAun4pg9cNOq2YFjnClUc6e2jnNv3lMlHcqKmA3GF4kXPWkOdwIq4VUjKvcAQMHFziKz/pub)
 
