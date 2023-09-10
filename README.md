@@ -5,7 +5,7 @@ Message Transfer Protocol
 2- Descarge los ejecutables __MTPwriter__ y __MTPreader__.\
 3- Ejecute __MTPwriter__ y empiece a encriptar.
 ## ¿Cómo transferir mensajes a través del protocolo MTP?
-Primeramente, las partes involucradas en establecer una comunicación a través del protocolo MTP deberán de haber descargado los ejecutables __MTPwriter__ y __MTPreader__ para la escritura y lectura de los mensajes.\
+Primeramente, las partes involucradas en establecer una comunicación a través del protocolo MTP deberán de haber descargado los ejecutables __MTPwriter__ y __MTPreader__ para la escritura y lectura de los mensajes.\\
 1- El emisor deberá ejecutar __MTPwriter__\
 2- Crear un nuevo mensaje\
 3- Elegir una llave\
