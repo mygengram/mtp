@@ -10,7 +10,7 @@ Primeramente, las partes involucradas en establecer una comunicación a través 
 2- Crear un nuevo mensaje\
 3- Elegir una llave\
 4- Escribir el mensaje\
-5- Encriptar\
+5- Encriptar el mensaje\
 6- Transferir el archivo y la llave\
 7- Ejecutar __MTPreader__\
 8- Abrir el archivo\
