@@ -44,7 +44,6 @@ public class MTPwriter {
         System.out.println("Ingresa el nombre del archivo");
         String archivo = scanner.nextLine();
         String nombreDelArchivo =  archivo + ".txt";
-        System.out.println(numeroD);
 
         textoArchivo(textoASerializar, nombreDelArchivo);
         
