@@ -12,10 +12,10 @@ Primeramente, las partes involucradas en establecer una comunicación a través 
 6- Se transfiere el archivo y la llave secreta generada\
 Posteriormente, el receptor recibe el archivo y la llave secreta.\
 1- Ejecutar __MTPreader__ (java -jar "MTPreader.jar")\
-2- Abrir el archivo\
+2- Abrir el archivo (deberá de estar en el mismo directorio que el ejecutable)\
 3- Escribir la llave\
 4- Desencriptar el mensaje\
-5- Leer el mensaje\
+5- Leer el mensaje
 ### Para mayor información: [El Protocolo MTP](https://docs.google.com/document/d/e/2PACX-1vTf7jOA-6RzPAun4pg9cNOq2YFjnClUc6e2jnNv3lMlHcqKmA3GF4kXPWkOdwIq4VUjKvcAQMHFziKz/pub)
 gengram ©2023
 
