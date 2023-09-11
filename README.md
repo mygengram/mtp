@@ -11,7 +11,7 @@ Primeramente, las partes involucradas en establecer una comunicación a través 
 5- El mensaje se encripta\
 6- Se transfiere el archivo y la llave secreta generada\
 Posteriormente, el receptor recibe el archivo y la llave secreta.\
-1- Ejecutar __MTPreader__\
+1- Ejecutar __MTPreader__ (java -jar "MTPreader.jar")\
 2- Abrir el archivo\
 3- Escribir la llave\
 4- Desencriptar el mensaje\
