@@ -16,7 +16,7 @@ Posteriormente, el receptor recibe el archivo y la llave secreta.\
 3- Escribir la llave\
 4- Desencriptar el mensaje\
 5- Leer el mensaje
-### Para mayor información: [El Protocolo MTP]([https://docs.google.com/document/d/e/2PACX-1vTf7jOA-6RzPAun4pg9cNOq2YFjnClUc6e2jnNv3lMlHcqKmA3GF4kXPWkOdwIq4VUjKvcAQMHFziKz/pub)
+### Para mayor información: [El Protocolo MTP](https://docs.google.com/document/d/e/2PACX-1vTf7jOA-6RzPAun4pg9cNOq2YFjnClUc6e2jnNv3lMlHcqKmA3GF4kXPWkOdwIq4VUjKvcAQMHFziKz/pub)
 ### Pruebas: [Casos correctos e incorrectos y ejecución](https://docs.google.com/document/d/e/2PACX-1vTDQxuzangbvqgURfvDqfpYP07D3tA2GOjOEnu4Md4CuZSO-k4ILkyTgS7gPAKf6HcMvrItj-ruYqpi/pub)
 gengram ©2023
 
