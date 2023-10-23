@@ -9,23 +9,31 @@ import java.util.Scanner;
 
 public class MTPwriter {  
     public static void main(String[] args) {
-        Random rand = new Random();
-        int numeroD = rand.nextInt(9) + 1;
-
+        
+        int frecuencia;
+        int cantidad;
+        int desplazamiento;
+        String mensaje;
+        String cifrado1;
+        String cifrado2;
+        
+        Serializa serial = new Serializa();
+        Aleatorios aleatorio = new Aleatorios();
         
         Scanner scanner = new Scanner(System.in);
         
         System.out.print("Ingresa una frase (solo letras, números y signos de puntuación básicos): ");
-        String frase = scanner.nextLine();
+        mensaje = scanner.nextLine();
         
-        int primerNumeroAleatorio = generarNumeroAleatorio();
-        int segundoNumeroAleatorio = generarNumeroAleatorio();
+        desplazamiento = aleatorio.numeroRandom();
+        frecuencia = aleatorio.numeroRandom();
+        cantidad = aleatorio.numeroRandom();
         
-        String fraseEncriptada = encriptarFrase(frase, primerNumeroAleatorio, segundoNumeroAleatorio);
+        cifrado1 = encriptarFrase(mensaje,frecuencia,cantidad);
         
         
         
-        String mensaje = fraseEncriptada;
+        mensaje = cifrado1;
         
         while (!mensaje.matches("^[a-zA-Z0-9 ]*$")) {
             System.out.println("Por favor ingrese un mensaje que solo contenga números y letras.");
@@ -44,19 +52,14 @@ public class MTPwriter {
         System.out.println("Ingresa el nombre del archivo");
         String archivo = scanner.nextLine();
         String nombreDelArchivo =  archivo + ".txt";
-
-        textoArchivo(textoASerializar, nombreDelArchivo);
+        
+        serial.serializar(textoASerializar, nombreDelArchivo);
         
         System.out.println("Primer número aleatorio generado: " + primerNumeroAleatorio);
         System.out.println("Segundo número aleatorio generado: " + segundoNumeroAleatorio);
         System.out.println("Segundo número aleatorio generado: " + numeroD);
         System.out.println("Frase encriptada: " + encriptado);
         System.out.println("Clave: " + primerNumeroAleatorio + segundoNumeroAleatorio + numeroD);
-    }
-    
-    public static int generarNumeroAleatorio() {
-        Random random = new Random();
-        return random.nextInt(5) + 1; // Genera un número aleatorio entre 1 y 9
     }
     
     public static String encriptarFrase(String frase, int primerNumero, int segundoNumero) {
@@ -79,27 +82,5 @@ public class MTPwriter {
         
         return resultado.toString();
     }
-    
-    public static char generarCaracterAleatorio(Random random) {
-        String caracteresPermitidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        int indice = random.nextInt(caracteresPermitidos.length());
-        return caracteresPermitidos.charAt(indice);
-    }
-    public static void textoArchivo(String texto, String nombreArchivo) {
-        try {
-            File archivo = new File(nombreArchivo);
-
-            FileWriter escritor = new FileWriter(archivo);
-
-            BufferedWriter bufferEscritura = new BufferedWriter(escritor);
-            bufferEscritura.write(texto);
-            bufferEscritura.close();
-
-            System.out.println("Texto guardado en el archivo " + nombreArchivo);
-            
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    
+   
 }
