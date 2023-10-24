@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class MTPreader {
     public static void main(String[] args) {
         
-        String archivo, cifrado, mensaje;
+        String archivo, cifrado, mensaje, clave;
         int frecuencia, cantidad, desplazamiento;
         
         Scanner scanner = new Scanner(System.in);
@@ -21,17 +21,15 @@ public class MTPreader {
         
         cifrado = obtener.obtieneLinea(archivo);
         
-        System.out.println("Contenido del archivo:" + cifrado);
+        System.out.println("Contenido del archivo: " + cifrado);
 
-        System.out.print("Ingresa el primer número de la clave: ");
-        frecuencia = scanner.nextInt();
-
-        System.out.print("Ingresa el segundo número de la clave: ");
-        cantidad = scanner.nextInt();
+        System.out.print("Ingresa la clave: ");
+        clave = scanner.nextLine();
         
-        System.out.print("Ingresa el tercer número de la clave: ");
-        desplazamiento = scanner.nextInt();
-
+        frecuencia = Character.getNumericValue(clave.charAt(0));
+        cantidad = Character.getNumericValue(clave.charAt(1));
+        desplazamiento = Character.getNumericValue(clave.charAt(2));
+                
         cifrado = descifra.primerDescifrado(cifrado, desplazamiento);
         mensaje = descifra.segundoDescifrado(cifrado,frecuencia,cantidad);
 
