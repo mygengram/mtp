@@ -7,77 +7,36 @@ import java.util.Scanner;
 
 public class MTPreader {
     public static void main(String[] args) {
+        
+        String archivo, cifrado, mensaje;
+        int frecuencia, cantidad, desplazamiento;
+        
         Scanner scanner = new Scanner(System.in);
+        
+        Obtiene obtener = new Obtiene();
+        Descifrados descifra = new Descifrados();
 
-        StringBuilder contenidoArchivo = new StringBuilder();
         System.out.print("Ingrese el nombre del archivo: ");
-        String nombreArchivo = scanner.nextLine();
+        archivo = scanner.nextLine()+".txt";
         
-        try {
-            FileReader fileReader = new FileReader(nombreArchivo);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            
-            String linea;
-            while ((linea = bufferedReader.readLine()) != null) {
-                contenidoArchivo.append(linea).append(""); 
-            }
-            
-            bufferedReader.close();
-        } catch (IOException e) {
-            System.err.println("Error al leer el archivo: " + e.getMessage());
-        }
+        cifrado = obtener.obtieneLinea(archivo);
         
-        String contenido = contenidoArchivo.toString();
-        System.out.println("Contenido del archivo:" + contenido);
+        System.out.println("Contenido del archivo:" + cifrado);
 
         System.out.print("Ingresa el primer número de la clave: ");
-        int primerNumero = scanner.nextInt();
+        frecuencia = scanner.nextInt();
 
         System.out.print("Ingresa el segundo número de la clave: ");
-        int segundoNumero = scanner.nextInt();
+        cantidad = scanner.nextInt();
         
         System.out.print("Ingresa el tercer número de la clave: ");
-        int numeroD = scanner.nextInt();
+        desplazamiento = scanner.nextInt();
 
-        char arrayD[] = contenido.toCharArray();
+        cifrado = descifra.primerDescifrado(cifrado, desplazamiento);
+        mensaje = descifra.segundoDescifrado(cifrado,frecuencia,cantidad);
 
-        for (int i = 0; i < arrayD.length; i++){
-            arrayD[i] = (char)(arrayD[i]-(char)numeroD);
-        }
+        System.out.println("Frase original desencriptada: " + mensaje);
         
-        String desencriptado = String.valueOf(arrayD);
-        
-        String fraseOriginal = desencriptarFrase(desencriptado, primerNumero, segundoNumero);
-
-        System.out.println("Frase original desencriptada: " + fraseOriginal);
     }
 
-    public static String desencriptarFrase(String desencriptado, int primerNumero, int segundoNumero) {
-        StringBuilder resultado = new StringBuilder();
-        int contador = 0, contador2 = 0;
-        
-        char caracter;
-        for (int i = 0; i < desencriptado.length(); i++) {
-            if (++contador <= primerNumero){
-                caracter = desencriptado.charAt(i);
-            }else{
-                for(int j = 0; j < segundoNumero; j++){
-                    if(++contador2 < segundoNumero){
-                        break;
-                    }
-                    else{
-                        contador2 = 0;
-                        contador = 0;
-                        break;
-                    }
-                }
-                
-                caracter = '\0';
-            }
-            resultado.append(caracter);
-            
-        }
-
-        return resultado.toString();
-    }
 }
